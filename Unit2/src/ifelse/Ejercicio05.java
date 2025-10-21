@@ -31,7 +31,7 @@ public class Ejercicio05 {
 		secondPlayer = sc.nextLine();
 		
 		//We establish how one the users would win
-		if (!firstPlayer.equals(TIJERAS) || !firstPlayer.equals(PAPEL) || !firstPlayer.equals(PIEDRA)) {
+		if (firstPlayer.equals(TIJERAS) || firstPlayer.equals(PAPEL) || firstPlayer.equals(PIEDRA)) {
 			System.out.println("Primera jugada incorrecta");
 		} else if (!firstPlayer.equals(TIJERAS) && !firstPlayer.equals(PAPEL) && !firstPlayer.equals(PIEDRA)) {
 			System.out.println("Segunda jugada incorrecta");
