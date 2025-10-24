@@ -9,6 +9,7 @@ public class Ejercicio04 {
 		Scanner sc = new Scanner (System.in);
 		
 		
+		}
 
 	}
 
