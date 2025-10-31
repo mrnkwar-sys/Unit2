@@ -46,22 +46,72 @@ public class Exercise04 {
 		centsReq = sc.nextInt();
 		
 		//The console waits for the user to introduce the money that the client has paid
+		System.out.println("Introduce the amount of money the client has paid:");
 		centsGiv = sc.nextInt();
 		
 		//The result of the change
 		change = centsGiv - centsReq;
 		
 		//We want to calculate the change with the least number of coins
-		if (change<=1) {
+		if (change == 1) {
 			oneCent = change/1;
-			System.out.println("The change is "+twoEuro+" "+oneEuro+" "+fiftyCent+" "+twentyCent+" "+tenCent+" "+fiveCent+" "+twoCent+" "+oneCent);
-		} else if (change<=2) {
+		} else if (change == 2) {
 			twoCent = change/2;
-			System.out.println("The change is "+twoEuro+" "+oneEuro+" "+fiftyCent+" "+twentyCent+" "+tenCent+" "+fiveCent+" "+twoCent+" "+oneCent);
-		} else if (change<=5) {
+		} else if (change <= 5) {
 			fiveCent = change/5;
 			twoCent = change/2;
+			oneCent = (change%2)/1;
+		} else if (change <= 10) {
+			tenCent = change/10;
+			fiveCent = change/5;
+			twoCent = (change%5)/2;
+			oneCent = ((change%5)%2)/1;
+		} else if (change <= 20) {
+			twentyCent = change/20;
+			tenCent = change/10;
+			fiveCent = (change%10)/5;
+			twoCent = ((change%10)%5)/2;
+			oneCent = (((change%10)%5)%2)/1;
+		} else if (change <= 50) {
+			fiftyCent = change/50;
+			twentyCent = change/20;
+			tenCent = (change%20)/10;
+			fiveCent = ((change%20)%10)/5;
+			twoCent = (((change%20)%10)%5)/2;
+			oneCent = ((((change%20)%10)%5)%2)/1;
+		} else if (change <= 100) {
+			oneEuro = change/100;
+			fiftyCent = change/50;
+			twentyCent = (change%50)/20;
+			tenCent = ((change%50)%20)/10;
+			fiveCent = (((change%50)%20)%10)/5;
+			twoCent = ((((change%50)%20)%10)%5)/2;
+			oneCent = (((((change%50)%20)%10)%5)%2)/1;
+		} else if (change <= 200) {
+			twoEuro = change/200;
+			oneEuro = change/100;
+			fiftyCent = (change%100)/50;
+			twentyCent = ((change%100)%50)/20;
+			tenCent = (((change%100)%50)%20)/10;
+			fiveCent = ((((change%100)%50)%20)%10)/5;
+			twoCent = (((((change%100)%50)%20)%10)%5)/2;
+			oneCent = ((((((change%100)%50)%20)%10)%5)%2)/1;
+		} else {
+			twoEuro = change/200;
+			oneEuro = (change%200)/100;
+			fiftyCent = ((change%200)%100)/50;
+			twentyCent = (((change%200)%100)%50)/20;
+			tenCent = ((((change%200)%100)%50)%20)/10;
+			fiveCent = (((((change%200)%100)%50)%20)%10)/5;
+			twoCent = ((((((change%200)%100)%50)%20)%10)%5)/2;
+			oneCent = (((((((change%200)%100)%50)%20)%10)%5)%2)/1;
 		}
+		
+		//The necessary coins are shown in the console
+		System.out.println("The change is "+twoEuro+" "+oneEuro+" "+fiftyCent+" "+twentyCent+" "+tenCent+" "+fiveCent+" "+twoCent+" "+oneCent);
+		
+		//Close Scanner
+		sc.close();
 
 	}
 
