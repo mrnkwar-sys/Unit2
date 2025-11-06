@@ -53,7 +53,13 @@ public class Ejercicio03 {
 		case "A" -> System.out.println("El resultado es: " + sum);
 		case "B" -> System.out.println ("El resultado es: " + rest);
 		case "C" -> System.out.println("El resultado es: " + mult);
-		case "D" -> System.out.println("El resultado es: " + (double)div);
+		case "D" -> {
+			if (secondNum != 0) {
+				System.out.println("El resultado es: " + (double)div);
+			} else {
+				System.out.println("No se puede dividir un número entre 0");
+			}
+		}
 		default -> System.out.println("Debe escribir una de las opciones: A, B, C o D");
 		}
 		
