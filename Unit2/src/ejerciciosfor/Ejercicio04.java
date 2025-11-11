@@ -8,19 +8,26 @@ public class Ejercicio04 {
 		//Create a Scanner
 		Scanner sc = new Scanner (System.in);
 		
-		//The numbers until the 10
-		int num;
-		
 		//The sum of the impair numbers
-		int sum;
+		int sum = 0;
 		
-		//The first impair numbers 
-		int impairNum;
+		//The console will introduce the prompt to introduce the answer
+		System.out.print("La suma de los 10 primeros números impares es ");
 		
-		//We want to show the sum of the first impair numbers
+		//We want to show the sum of the first 10 impair numbers
 		for(int contador=0; contador<20; contador++) {
 			
+			//The numbers that can be divided by 2 are impairs
+			if (contador%2 != 0) {
+				sum += contador;
+			}
 		}
+		
+		//The console finally shows the answer
+		System.out.print(sum);
+		
+		//Close Scanner
+		sc.close();
 
 	}
 
