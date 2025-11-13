@@ -25,7 +25,9 @@ public class Ejercicio07 {
 			}
 		}
 		
-		if (prime) {
+		if (num == 1) {
+			System.out.println("Su número no es primo");
+		} else if (prime) {
 			System.out.println("Su número es primo");
 		} else {
 			System.out.println("Su número no es primo");

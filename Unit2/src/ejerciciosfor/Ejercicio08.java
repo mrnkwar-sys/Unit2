@@ -14,6 +14,12 @@ public class Ejercicio08 {
 		//The B number introduced by the user
 		int numberB;
 		
+		//The larger number
+		int large;
+		
+		//The smaller number
+		int small;
+		
 		//The console waits for the user to introduce their numbers
 		System.out.println("Introduzca un número:");
 		numberA = sc.nextInt();
@@ -22,14 +28,17 @@ public class Ejercicio08 {
 		numberB = sc.nextInt();
 		
 		//If A is larger than B, the console will show all the numbers from A until B
-		if (numberA>numberB) {
-			for (int contador=numberA; contador>=numberB; contador--) {
-				System.out.print(contador);
-			}
+		if (numberA<numberB) {
+			large = numberB;
+			small= numberA;
 		} else {
-			for (int contador=numberB; contador>=numberA; contador--) {
-				System.out.print(contador);
-			}
+			large = numberA;
+			small = numberB;
+		}
+		
+		//The console shows the answer
+		for (int contador=small; contador<=large; contador++) {
+			System.out.println(contador);
 		}
 		
 		//Close Scanner
