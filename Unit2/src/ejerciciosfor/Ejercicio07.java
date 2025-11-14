@@ -25,13 +25,11 @@ public class Ejercicio07 {
 			}
 		}
 		
-		if (num == 1) {
+		if (num == 1 || !prime) {
 			System.out.println("Su número no es primo");
 		} else if (prime) {
 			System.out.println("Su número es primo");
-		} else {
-			System.out.println("Su número no es primo");
-		}
+		} 
 		
 		//Close Scanner
 		sc.close();

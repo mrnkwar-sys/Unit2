@@ -17,30 +17,32 @@ public class Ejercicio01 {
 		//The seconds introduced by the user
 		int second;
 		
-		//The console waits for the user to introduce the time
-		System.out.println("Introduzca un número de horas:");
-		hour = sc.nextInt();
+		/* The console waits for the user to introduce the hours
+		 * if the quantity of hours can't be understand as a time, it will ask again
+		 */
+		do {
+			System.out.println("Introduzca un número de horas:");
+			hour = sc.nextInt();
+		} while (hour<0 || hour>23);
 		
-		//If the user introduces a number that can't be understand as an hour, we will tell them
-		if (hour>23 || hour<0) {
-			System.out.println("Introduzca un número de horas adecuado:");
-		}
+		/* The console waits for the user to introduce the minutes
+		 * if the quantity of hours can't be understand as a time, it will ask again
+		 */
+		do {
+			System.out.println("Introduzca un número de minutos:");
+			minute = sc.nextInt();
+		} while (minute<0 || minute>60);
 		
-		System.out.println("Introduzca un número de minutos:");
-		minute = sc.nextInt();
+		/* The console waits for the user to introduce the time
+		 * if the quantity of hours can't be understand as a time, it will ask again
+		 */
+		do {
+			System.out.println("Introduzca un número de segundos:");
+			second = sc.nextInt();
+		} while (second<0 || second>60);
 		
-		//If the user introduces a number that can't be understand as a quantity of minutes, we will tell them
-		if (minute>60 || minute<0) {
-		System.out.println("Introduzca un número de minutos adecuado:");
-		}
+		//The console waits for the user to introduce how many seconds they want to increase the time
 		
-		System.out.println("Introduzca un número de segundos:");
-		second = sc.nextInt();
-		
-		//If the user introduces a number that can't be understand as a quantity of seconds, we will tell them
-		if (second>60 || second<0) {
-			System.out.println("Introduzca un número de segundos adecuado:");
-		}
 		
 		
 		//Close Scanner
