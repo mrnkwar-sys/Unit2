@@ -5,20 +5,22 @@ import java.util.Scanner;
 public class Ejercicio04 {
 
 	public static void main(String[] args) {
-		// Create a Scanner
+		//Create a Scanner
 		Scanner sc = new Scanner(System.in);
 
-		// The first number introduced by the user
+		//The first number introduced by the user
 		int firstNum;
 
-		// The second number introduced by the user
+		//The second number introduced by the user
 		int secondNum;
 
-		// The largest number among the ones introduced
+		//The largest number among the ones introduced
 		int big;
-
-		boolean esMcm = true;
-		// The console waits for the user to introduce the numbers
+		
+		//
+		boolean isLcm = true;
+		
+		//The console waits for the user to introduce the numbers
 		do {
 			System.out.println("Introduzca un primer número");
 			firstNum = sc.nextInt();
@@ -32,15 +34,13 @@ public class Ejercicio04 {
 		// We check which number is larger
 		big = Math.max(firstNum, secondNum);
 
-		while (esMcm) {
-			if (big % firstNum != 0 && big % secondNum != 0) {
+		while (isLcm) {
+			if (big % firstNum == 0 && big % secondNum == 0) {
 				System.out.println("El m.c.m de " + firstNum + " y " + secondNum + " es " + big);
-				esMcm = false;
+				isLcm = false;
 			}
 			big++;
 		}
-		
-		//The console shows the results
 		
 		//Close Scanner
 		sc.close();
