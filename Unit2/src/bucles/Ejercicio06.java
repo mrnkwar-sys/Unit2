@@ -27,7 +27,8 @@ public class Ejercicio06 {
 					
 				System.out.println();
 			}
-				
+		
+		//Close Scanner
 		sc.close();
 
 	}
