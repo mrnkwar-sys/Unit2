@@ -17,7 +17,6 @@ public class Ejercicio01 {
 		
 		//We will draw asterisks as many times as the number introduced
 		for (int column = 0; column <= side; column++) {
-			System.out.print("*");
 			if (column >= 1 && column < side) {
 				for (int i=0; i <= side-2; i++) {
 					System.out.println("*");
