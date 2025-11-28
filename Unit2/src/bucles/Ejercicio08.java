@@ -9,10 +9,10 @@ public class Ejercicio08 {
 		Scanner sc = new Scanner(System.in);
 		
 		//The first number introduced by the user
-		int num = 1;
+		int num;
 		
 		//The number introduced before another
-		int befNum = 1;
+		int befNum;
 		
 		//The quantity of mistakes done (if the number is smaller than the one introduced before)
 		int quantMista = 0;
@@ -20,18 +20,23 @@ public class Ejercicio08 {
 		//The quantity of numbers introduced, except the 0
 		int quantity = 0;
 		
+		//The console waits for the user to introduce a first number
+		System.out.println("Introduzca un primer número:");
+		befNum = sc.nextInt();
+		
 		//The console waits for the user to introduce a number
 		do {
-			System.out.println("Introduzca un número:");
-			befNum = sc.nextInt();
-			
 			System.out.println("Introduzca otro número:");
 			num = sc.nextInt();
 			
-			if (befNum > num) {
+			quantity++;
+			
+			if ((befNum > num) && num != 0) {
 				quantMista++;
-				System.out.println("Ha introducido un error");
+				System.out.println("Error, ha introducido un número menor");
 			} 
+			
+			befNum = num;
 				
 		} while ((befNum != 0) || (num != 0));
 		
