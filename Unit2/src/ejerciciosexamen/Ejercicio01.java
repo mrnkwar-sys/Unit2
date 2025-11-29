@@ -16,21 +16,19 @@ public class Ejercicio01 {
 		side = sc.nextInt();
 		
 		//We will draw asterisks as many times as the number introduced
-		for (int column = 0; column <= side; column++) {
-			if (column >= 1 && column < side) {
-				for (int i=0; i <= side-2; i++) {
-					System.out.println("*");
-					for (int j=0; j <= side-2; j++) {
-						System.out.println(" ");
-					}
+		for(int contador = 1; contador <= side; contador++) {
+			if(contador == 1 || contador == side) {
+				for (int row = 1; row <= side; row++) {
+					System.out.print("*");
 				}
-			}
-			if (column < 1 || column >= side) {
-				for (int cont = 0; cont < side-2; cont++) {
-					System.out.println("*");
+			} else {
+				System.out.print("*");
+				for (int space = 1; space <= side-2; space++) {
+					System.out.print(" ");
 				}
+				System.out.print("*");
 			}
-			System.out.println("*");
+				System.out.println();
 		}
 		
 		//Close Scanner
