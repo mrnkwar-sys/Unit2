@@ -18,13 +18,15 @@ public class Ejercicio03 {
 		//The size of the triangle
 		for (int size = 1; size <= side; size++) {
 			if (size == 1) {
-				System.out.println("*");
+				for (int row = 1; row <=side; row++) {
+					System.out.print("* ");
+				}
 			}
 			
 			//The spaces that surround the shape of the triangle
 			if (size >= 2) {
 				for (int space = 1; space <= side-1; space++) {
-					
+					System.out.println(" ");
 				}
 			}
 		}
