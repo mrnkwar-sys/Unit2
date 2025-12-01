@@ -15,7 +15,7 @@ public class Ejercicio06 {
 		System.out.println("Introduzca el tamaño del triángulo:");
 		size = sc.nextInt();
 				
-		//The loop fo the rows
+		//The loop for the rows
 		for (int row=1; row<=size; row++) {
 			for(int space=1; space<=size-row; space++) {
 				System.out.print(" ");
@@ -25,7 +25,7 @@ public class Ejercicio06 {
 				System.out.print("* ");
 			}
 					
-				System.out.println();
+			System.out.println();
 			}
 		
 		//Close Scanner
