@@ -26,7 +26,7 @@ public class Ejercicio01 {
 		} while (hour<0 || hour>23);
 		
 		/* The console waits for the user to introduce the minutes
-		 * if the quantity of hours can't be understand as a time, it will ask again
+		 * if the quantity of minutes can't be understand as a time, it will ask again
 		 */
 		do {
 			System.out.println("Introduzca un número de minutos:");
